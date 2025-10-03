@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tolaab — Thank You</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: linear-gradient(180deg, #0f172a 0%, #111827 100%);
+      --accent: #6A42FF;
+      --muted: rgba(255,255,255,0.72);
+      --radius: 14px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: "Inter", sans-serif;
+      background: var(--bg);
+      color: #f5f6fa;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px;
+    }
+    .card{
+      max-width:700px;
+      background: rgba(255,255,255,0.03);
+      border-radius: var(--radius);
+      padding:48px 40px;
+      text-align:center;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.55);
+    }
+    .logo{
+      width:80px; height:80px;
+      margin:0 auto 24px;
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow: 0 6px 20px rgba(106,66,255,0.25);
+    }
+    .logo img{
+      width:100%; height:100%; object-fit:cover;
+      display:block;
+    }
+    h1{
+      font-size:28px;
+      margin-bottom:16px;
+      font-weight:700;
+      letter-spacing:0.3px;
+    }
+    p{
+      font-size:16px;
+      color:var(--muted);
+      max-width:580px;
+      margin:0 auto 28px;
+      line-height:1.6;
+    }
+    .btn{
+      display:inline-block;
+      padding:14px 32px;
+      font-size:16px;
+      font-weight:600;
+      color:white;
+      background: linear-gradient(90deg, var(--accent), #2b18b8);
+      border:none;
+      border-radius:12px;
+      cursor:pointer;
+      text-decoration:none;
+      box-shadow: 0 10px 30px rgba(42,15,150,0.3);
+      transition:transform 0.15s;
+    }
+    .btn:hover{ transform:translateY(-2px); }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="logo">
+      <img src="https://tolaab.com/wp-content/uploads/2025/06/ic_launcher.png" alt="Tolaab Logo">
+    </div>
+    <h1>Tolaab Thanks You</h1>
+    <p>
+      We deeply value your partnership and trust in us.  
+      As a distinguished partner, you now have exclusive access to your personalized dashboard.  
+      Inside, you’ll find everything prepared for you — designed to support your growth and success.
+    </p>
+
+    <a class="btn" href="https://pnlvendor.tolaab.com/">
+      Go to Your Dashboard
+    </a>
+  </div>
+
+</body>
+</html>
