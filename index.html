@@ -9,8 +9,7 @@
 
   <style>
     :root{
-      --bg: linear-gradient(180deg, #1454e9 0%, #6692f1 100%);
-      --accent: #6A42FF;
+      --accent: #5f2eed; /* Tolaab Purple */
       --muted: rgba(255,255,255,0.72);
       --radius: 14px;
     }
@@ -19,27 +18,51 @@
     body{
       margin:0;
       font-family: "Inter", sans-serif;
-      background: var(--bg);
+      background-color: #eceef5; /* soft purple background */
       color: #f5f6fa;
       display:flex;
       align-items:center;
       justify-content:center;
       padding:32px;
+      position: relative;
+      overflow-x: hidden;
     }
+
+    /* Floating Circles */
+    .circle { position: absolute; border-radius: 50%; background: var(--accent); animation: float 14s ease-in-out infinite; }
+    @keyframes float {
+      0%,100% { transform: translateY(0px) translateX(0px) scale(1); }
+      50% { transform: translateY(-40px) translateX(25px) scale(1.05); }
+    }
+    .circle1 { width: 400px; height: 400px; top: -180px; left: -150px; opacity: 0.3; animation-delay: 0s; }
+    .circle2 { width: 300px; height: 300px; bottom: -120px; right: -120px; opacity: 0.4; animation-delay: 1s; }
+    .circle3 { width: 220px; height: 220px; top: 50%; left: -120px; opacity: 0.25; animation-delay: 2s; }
+    .circle4 { width: 180px; height: 180px; top: 30%; right: 10%; opacity: 0.35; animation-delay: 3s; }
+    .circle5 { width: 260px; height: 260px; bottom: 20%; left: 10%; opacity: 0.3; animation-delay: 4s; }
+    .circle6 { width: 150px; height: 150px; bottom: 10%; right: 25%; opacity: 0.45; animation-delay: 5s; }
+    .circle7 { width: 100px; height: 100px; top: 15%; left: 35%; opacity: 0.25; animation-delay: 6s; }
+    .circle8 { width: 180px; height: 180px; bottom: 40%; right: 45%; opacity: 0.3; animation-delay: 7s; }
+    .circle9 { width: 240px; height: 240px; top: 75%; left: 55%; opacity: 0.4; animation-delay: 8s; }
+    .circle10 { width: 120px; height: 120px; top: 10%; right: 35%; opacity: 0.25; animation-delay: 9s; }
+
+    /* Card */
     .card{
       max-width:700px;
-      background: rgba(255,255,255,0.03);
+      background: rgba(255,255,255,0.9);
       border-radius: var(--radius);
       padding:48px 40px;
       text-align:center;
-      box-shadow: 0 8px 40px rgba(78, 113, 186, 0.55););
+      box-shadow: 0 10px 50px rgba(95, 46, 237, 0.25);
+      position: relative;
+      z-index: 10;
+      backdrop-filter: blur(12px);
     }
     .logo{
       width:80px; height:80px;
       margin:0 auto 24px;
       border-radius:20px;
       overflow:hidden;
-      box-shadow: 0 6px 20px rgba(106,66,255,0.25);
+      box-shadow: 0 6px 20px rgba(95,46,237,0.25);
     }
     .logo img{
       width:100%; height:100%; object-fit:cover;
@@ -50,10 +73,11 @@
       margin-bottom:16px;
       font-weight:700;
       letter-spacing:0.3px;
+      color: var(--accent);
     }
     p{
       font-size:16px;
-      color:var(--muted);
+      color:#757575;
       max-width:580px;
       margin:0 auto 28px;
       line-height:1.6;
@@ -64,18 +88,30 @@
       font-size:16px;
       font-weight:600;
       color:white;
-      background: linear-gradient(90deg, var(--accent), #2b18b8);
+      background: linear-gradient(90deg, var(--accent), #310d9b);
       border:none;
       border-radius:12px;
       cursor:pointer;
       text-decoration:none;
-      box-shadow: 0 10px 30px rgba(42,15,150,0.3);
+      box-shadow: 0 10px 30px rgba(95,46,237,0.3);
       transition:transform 0.15s;
     }
     .btn:hover{ transform:translateY(-2px); }
   </style>
 </head>
 <body>
+
+  <!-- Floating Circles -->
+  <div class="circle circle1"></div>
+  <div class="circle circle2"></div>
+  <div class="circle circle3"></div>
+  <div class="circle circle4"></div>
+  <div class="circle circle5"></div>
+  <div class="circle circle6"></div>
+  <div class="circle circle7"></div>
+  <div class="circle circle8"></div>
+  <div class="circle circle9"></div>
+  <div class="circle circle10"></div>
 
   <div class="card">
     <div class="logo">
